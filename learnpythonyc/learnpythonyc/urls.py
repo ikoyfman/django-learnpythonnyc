@@ -21,5 +21,7 @@ from lpnyc import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.current_datetime, name='home'),
-    path('cat_fact/', views.get_cat_fact, name='cat_fact')
+    path('cat_fact/', views.get_cat_fact, name='cat_fact'),
+    path('people/', views.people_view, name="people"),
+    path('ice_cream/', views.ice_cream_view, name="ice_cream")
 ]

@@ -1,11 +1,10 @@
 from django.shortcuts import render
-import requests
-
-# Create your views here.
-
 from django.http import HttpResponse
 import datetime
+import requests
+from lpnyc.models import Person, IceCream
 
+# Create your views here.
 
 def current_datetime(request):
     now = datetime.datetime.now().strftime("%A %x %X")
@@ -23,3 +22,11 @@ def get_cat_fact(request):
     data = data['data'][0]["fact"]
     html = "<html><body><h1>{}</h1></body></html>".format(data)
     return HttpResponse(html)
+
+def people_view(request):
+    people = Person.objects.all()
+    return HttpResponse(people)
+
+def ice_cream_view(request):
+    ice_cream = IceCream.objects.all()
+    return HttpResponse(ice_cream)
