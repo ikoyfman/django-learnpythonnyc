@@ -30,3 +30,11 @@ def people_view(request):
 def ice_cream_view(request):
     ice_cream = IceCream.objects.all()
     return HttpResponse(ice_cream)
+
+def temp_view(request):
+    return render(request, 'lpnyc/lpnyc_base.html')
+
+def people_temp_view(request):
+    people = Person.objects.all()
+
+    return render(request, 'lpnyc/people.html', context={'people':people})
