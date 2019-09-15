@@ -16,6 +16,10 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
+from lpnyc import views
+
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('', views.current_datetime, name='home'),
+    path('cat_fact/', views.get_cat_fact, name='cat_fact')
 ]
