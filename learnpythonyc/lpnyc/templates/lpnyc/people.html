@@ -5,4 +5,17 @@
 <h1>extended</h1>
 <h2>{{ people }}</h2>
 
+{% for person in people %}
+    <div class="card" style="width: 18rem;">
+        <div class="card-body">
+        <h5 class="card-title">{{person}}</h5>
+        <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+        <p class="card-text">{{person.first_name}}'s favorite ice cream is {{person.favorite_icecream}}.</p>
+        </div>
+    </div>
+{% endfor %}
+
+
+
+
 {% endblock %}
