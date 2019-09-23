@@ -2,9 +2,14 @@
 
 {% block content %}
 
-<h1>extended</h1>
-<h2>{{ people }}</h2>
+<div class="container"
+    <h2>{{ people }}</h2>
+</div>
 
+<div class="album py-5 bg-light">
+    <div class="container">
+        <div class="row">
+    
 {% for person in people %}
     <div class="card" style="width: 18rem;">
         <div class="card-body">
@@ -15,6 +20,9 @@
     </div>
 {% endfor %}
 
+        </div>
+    </div>
+</div>
 
 
 
