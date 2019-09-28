@@ -1,0 +1,30 @@
+{% extends "lpnyc/base.html" %}
+
+{% block content %}
+
+<div class="container"
+    <h2>VideoGame Data for all games below</h2>
+</div>
+
+<div class="album py-5 bg-light">
+    <div class="container">
+        <div class="row">
+    
+{% for videogame in vdata %}
+    <div class="card" style="width: 18rem;">
+        <div class="card-body">
+        <h5 class="card-title">{{videogame}}</h5>
+        <h6 class="card-subtitle mb-2 text-muted">Released {{videogame.released}}, by {{videogame.publisher}}</h6>
+        <p class="card-text">Genre is {{videogame.genre}}.</p>
+        <p class="card-text">Sold {{videogame.na_sales}} million copies.</p>
+        </div>
+    </div>
+{% endfor %}
+
+        </div>
+    </div>
+</div>
+
+
+
+{% endblock %}

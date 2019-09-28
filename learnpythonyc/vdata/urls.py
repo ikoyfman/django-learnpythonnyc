@@ -16,15 +16,8 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 
-from lpnyc import views
+from vdata import views
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('', views.current_datetime, name='home'),
-    path('cat_fact/', views.get_cat_fact, name='cat_fact'),
-    path('people/', views.people_view, name="people"),
-    path('ice_cream/', views.ice_cream_view, name="ice_cream"),
-    path('temp_view/', views.temp_view, name="temp_view"),
-    path('people_temp/', views.people_temp_view, name="people_temp_view"),
-    path('vdata/', include('vdata.urls'))
+    path('', views.vdata_view, name='vdata')
 ]
