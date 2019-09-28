@@ -26,5 +26,6 @@ urlpatterns = [
     path('ice_cream/', views.ice_cream_view, name="ice_cream"),
     path('temp_view/', views.temp_view, name="temp_view"),
     path('people_temp/', views.people_temp_view, name="people_temp_view"),
-    path('vdata/', include('vdata.urls'))
+    path('vdata/', include('vdata.urls')),
+    path('vdata_api/', include('vdata_api.urls'))
 ]
