@@ -3,7 +3,7 @@ from rest_framework import routers
 from vdata_api import views
 
 router = routers.DefaultRouter()
-router.register(r'vdata_api', views.VideogameViewSet)
+router.register('', views.VideogameViewSet)
 
 # Wire up our API using automatic URL routing.
 # Additionally, we include login URLs for the browsable API.
